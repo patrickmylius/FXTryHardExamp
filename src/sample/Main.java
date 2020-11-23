@@ -28,7 +28,9 @@ public class Main extends Application {
         bt.setStyle("-fx-background-color: #ff0000"); // Setting background color of button
         bt.setTextFill(Color.WHITE); //Setting Button text color
 
-        GridPane layout = new GridPane(); //Creates GridPane named layout
+        //Creates GridPane named layout
+        GridPane layout = new GridPane();
+        //specifying layout settings for GridPane "layout"
         layout.setPadding(new Insets(5));
         layout.setHgap(5);
         layout.setVgap(5);
@@ -43,10 +45,14 @@ public class Main extends Application {
         Stage stage = new Stage(); //Creating new stage
         stage.setTitle("Second Stage"); //Setting stage title
         Button bt1 = new Button("Save User"); //Creating new button bt1
-        GridPane layout1 = new GridPane(); //Creating new gridpane
+        //Creating new gridpane
+        GridPane layout1 = new GridPane();
+        //specifying layout settings for GridPane layout1
         layout1.setPadding(new Insets(5));
         layout1.setHgap(5);
         layout1.setVgap(5);
+
+        //Creating labels and textfields
         Label lb1 = new Label("Name");
         TextField tf1 = new TextField();
         Label lb2 = new Label("Last name");
