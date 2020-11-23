@@ -28,7 +28,7 @@ import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 import javafx.scene.control.Button;
 
-public class Main extends Application {
+public class MainCircle extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -62,19 +62,19 @@ public class Main extends Application {
         rotate.setCycleCount(10);
 
         //Create new button, which doesnt wanna fucking work
-      //  Button rotatePauseBt = new Button("Rotate");
-//        rotatePauseBt.setPrefHeight(60);
-//        rotatePauseBt.setPrefWidth(60);
-//        rotatePauseBt.setOnAction(event -> {
-//            if (rotate.getStatus() == Animation.Status.RUNNING)
-//                rotate.pause();
-//            else
-//                rotate.play();
-//        });
-//
-//        rotatePauseBt.textProperty().bind(new When(rotate.statusProperty().isEqualTo(Animation.Status.RUNNING)).then("Pause").otherwise("Rotate"));
-//
-       HBox hBox = new HBox(50, stackPane);
+          Button rotatePauseBt = new Button("Rotate");
+        rotatePauseBt.setPrefHeight(60);
+        rotatePauseBt.setPrefWidth(60);
+        rotatePauseBt.setOnAction(event -> {
+            if (rotate.getStatus() == Animation.Status.RUNNING)
+                rotate.pause();
+            else
+                rotate.play();
+        });
+
+        rotatePauseBt.textProperty().bind(new When(rotate.statusProperty().isEqualTo(Animation.Status.RUNNING)).then("Pause").otherwise("Rotate"));
+
+        HBox hBox = new HBox( stackPane, rotatePauseBt);
         hBox.setAlignment(Pos.CENTER);
         hBox.setStyle("-fx-background-color: red");
 
