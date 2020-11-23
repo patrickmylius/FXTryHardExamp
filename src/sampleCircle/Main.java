@@ -39,17 +39,15 @@ public class Main extends Application {
         shadow.setColor(Color.GRAY);
 
         //Create circle
-        Circle circle = new Circle();
-        circle.setCenterX(300);
-        circle.setCenterY(300);
-        circle.setRadius(100);
+        Circle circle = new Circle(200, 200, 100, Color.BLACK);
         circle.setStroke(Color.BLACK);
         circle.setStrokeWidth(5);
-        circle.setFill(Color.WHITE);
         circle.setEffect(shadow);
 
+        //Creating text
         Text text = new Text("This is my Circle");
         text.setEffect(new Reflection());
+        text.setStyle("-fx-background-color: white");
         text.setFont(Font.font("Roboto", FontWeight.BOLD, 22));
 
         //Create a pane to hold the circle
@@ -85,7 +83,6 @@ public class Main extends Application {
         //Create a scene and place it in the stage
         Scene scene = new Scene(hBox, 600, 600);
         primaryStage.setTitle("Rotation transition");
-
         primaryStage.setScene(scene);
         primaryStage.show();
 
