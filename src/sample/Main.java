@@ -34,6 +34,7 @@ public class Main extends Application {
         layout.setPadding(new Insets(5));
         layout.setHgap(5);
         layout.setVgap(5);
+        //specifying layout posistion button bt
         layout.add(bt, 20, 30);
 
 
@@ -58,20 +59,11 @@ public class Main extends Application {
         Label lb2 = new Label("Last name");
         TextField tf2 = new TextField();
 
-        //1 Name label
-        GridPane.setHalignment(lb1, HPos.RIGHT);
+        //specifying layout position for all Children
         layout1.add(lb1, 0, 0);//Setting label1 posis
-
-        GridPane.setHalignment(lb2, HPos.RIGHT);
         layout1.add(lb2, 0, 1); //Setting label2 posis
-
-        GridPane.setHalignment(tf1, HPos.LEFT);
         layout1.add(tf1, 1, 0); //Setting Textfield1 posis
-
-        GridPane.setHalignment(tf2, HPos.LEFT);
         layout1.add(tf2, 1, 1); //Setting Textfield2 posis
-
-        GridPane.setHalignment(bt1, HPos.RIGHT);
         layout1.add(bt1, 1, 3); //Setting button1
 
 
