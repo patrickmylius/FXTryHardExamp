@@ -5,7 +5,16 @@
  * Zealand ErhvervsAkademi - 4700
  * 23-11-2020
  */
-package sample;
+package sampleCircle;
 
-public class Circle {
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+
+public class Controller {
+
+    @FXML
+    private Button btn;
+
+
+
 }
