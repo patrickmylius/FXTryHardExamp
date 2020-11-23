@@ -22,7 +22,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
 
         //Primary Scene
-        primaryStage.setTitle("Hello World"); //Setting stage title
+        primaryStage.setTitle("Primary Stage"); //Setting stage title
         Button bt = new Button("BIG RED BUTTON"); // Create button named bt
         bt.setPrefSize(200, 100);
         bt.setStyle("-fx-background-color: #ff0000"); // Setting background color of button
