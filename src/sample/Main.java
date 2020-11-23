@@ -45,7 +45,7 @@ public class Main extends Application {
         //New Stage
         Stage stage = new Stage(); //Creating new stage
         stage.setTitle("Second Stage"); //Setting stage title
-        Button bt1 = new Button("Save User"); //Creating new button bt1
+        Button bt1 = new Button("Save"); //Creating new button bt1
         //Creating new gridpane
         GridPane layout1 = new GridPane();
         //specifying layout settings for GridPane layout1
