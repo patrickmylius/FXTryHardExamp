@@ -39,7 +39,7 @@ public class Main extends Application {
         shadow.setColor(Color.GRAY);
 
         //Create circle
-        Circle circle = new Circle(200, 200, 100, Color.BLACK);
+        Circle circle = new Circle(200, 200, 100, Color.WHITE);
         circle.setStroke(Color.BLACK);
         circle.setStrokeWidth(5);
         circle.setEffect(shadow);
@@ -47,7 +47,6 @@ public class Main extends Application {
         //Creating text
         Text text = new Text("This is my Circle");
         text.setEffect(new Reflection());
-        text.setStyle("-fx-background-color: white");
         text.setFont(Font.font("Roboto", FontWeight.BOLD, 22));
 
         //Create a pane to hold the circle
@@ -63,19 +62,19 @@ public class Main extends Application {
         rotate.setCycleCount(10);
 
         //Create new button, which doesnt wanna fucking work
-        Button rotatePauseBt = new Button("Rotate");
-        rotatePauseBt.setPrefHeight(60);
-        rotatePauseBt.setPrefWidth(60);
-        rotatePauseBt.setOnAction(event -> {
-            if (rotate.getStatus() == Animation.Status.RUNNING)
-                rotate.pause();
-            else
-                rotate.play();
-        });
-
-        rotatePauseBt.textProperty().bind(new When(rotate.statusProperty().isEqualTo(Animation.Status.RUNNING)).then("Pause").otherwise("Rotate"));
-
-        HBox hBox = new HBox(50, stackPane, rotatePauseBt);
+      //  Button rotatePauseBt = new Button("Rotate");
+//        rotatePauseBt.setPrefHeight(60);
+//        rotatePauseBt.setPrefWidth(60);
+//        rotatePauseBt.setOnAction(event -> {
+//            if (rotate.getStatus() == Animation.Status.RUNNING)
+//                rotate.pause();
+//            else
+//                rotate.play();
+//        });
+//
+//        rotatePauseBt.textProperty().bind(new When(rotate.statusProperty().isEqualTo(Animation.Status.RUNNING)).then("Pause").otherwise("Rotate"));
+//
+       HBox hBox = new HBox(50, stackPane);
         hBox.setAlignment(Pos.CENTER);
         hBox.setStyle("-fx-background-color: red");
 
